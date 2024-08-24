@@ -1,0 +1,31 @@
+GET http://localhost:8080/books
+Aceppt: application/json
+###
+POST http://localhost:8080/books
+Content-Type: application/json
+{
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Software Engineering"
+}
+###
+GET http://localhost:8080/books/1
+Accept: application/json
+###
+GET http://localhost:8080/books/1
+Content-Type: application/json
+
+{
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Software Development"
+}
+###
+DELETE http://localhost:8080/books/1
+###
+POST http://localhost:8080/simulate-reading
+Content-Type: application/json
+
+{
+    "book_ids": [1, 2, 3]
+}
